@@ -28,13 +28,12 @@ public class CSVService {
   }
 
   public ByteArrayInputStream load(){
-    List<Product> products = repository.findAll();
-
+    List<Product> products = (List<Product>) repository.findAll();
     ByteArrayInputStream in = CSVHelper.productsToCSV(products);
     return in;
   }
 
   public List<Product> getAllProducts() {
-    return repository.findAll();
+    return (List<Product>) repository.findAll();
   }
 }

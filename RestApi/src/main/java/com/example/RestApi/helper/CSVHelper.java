@@ -51,7 +51,7 @@ public class CSVHelper {
 		Product product = new Product (
               Long.parseLong(csvRecord.get("Id")),
               csvRecord.get("description"),
-              Integer.parseInt(csvRecord.get("Category_Id")),
+              Long.parseLong(csvRecord.get("Category_Id")),
               LocalDateTime.parse(csvRecord.get("creationdate"), ISO_LOCAL_DATE_TIME),
               LocalDateTime.parse(csvRecord.get("updateAt"),ISO_LOCAL_DATE_TIME),
               LocalDateTime.parse(csvRecord.get("lastpurchasedDate"),ISO_LOCAL_DATE_TIME)          		  

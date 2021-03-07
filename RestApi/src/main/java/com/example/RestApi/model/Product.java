@@ -25,7 +25,7 @@ public class Product {
 	 @OneToOne(cascade = CascadeType.ALL)
 	 @JoinColumn(name = "Category_Id", referencedColumnName = "Category_Id")
 	@Column(name="Category_Id")
-	private Integer Category_Id;
+	private Long Category_Id;
 	
 	@Column(name="Creation_Date")
 	private LocalDateTime creationdate;
@@ -39,7 +39,7 @@ public class Product {
 	public Product() {
 		}
 	
-	public Product(Long id, String description, Integer category_Id, LocalDateTime creationdate, LocalDateTime updateAt,
+	public Product(Long id, String description, Long category_Id, LocalDateTime creationdate, LocalDateTime updateAt,
 			LocalDateTime lastpurchasedDate) {
 		super();
 		Id = id;
@@ -66,11 +66,11 @@ public class Product {
 		this.description = description;
 	}
 
-	public Integer getCategory_Id() {
+	public Long getCategory_Id() {
 		return Category_Id;
 	}
 
-	public void setCategory(Integer category_Id) {
+	public void setCategory(Long category_Id) {
 		Category_Id = category_Id;
 	}
 
