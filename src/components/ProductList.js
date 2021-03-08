@@ -63,23 +63,12 @@ const ProductList = () => {
     setCurrentIndex(-1);
   };
 
-  const setActiveTutorial = (product, index) => {
+  const setActiveProduct = (product, index) => {
     setCurrentProduct(product);
     setCurrentIndex(index);
   };
 
- // const removeAllTutorials = () => {
- //   TutorialDataService.removeAll()
-  //    .then((response) => {
- //       console.log(response.data);
-//        refreshList();
- //     })
- //     .catch((e) => {
-  //      console.log(e);
-  //    });
-  //};
-
-  const handlePageChange = (event, value) => {
+   const handlePageChange = (event, value) => {
     setPage(value);
   };
 
@@ -111,7 +100,7 @@ const ProductList = () => {
         </div>
       </div>
       <div className="col-md-6">
-        <h4>Tutorials List</h4>
+        <h4>Products List</h4>
 
         <div className="mt-3">
           {"Items per Page: "}
@@ -154,12 +143,12 @@ const ProductList = () => {
       <div className="col-md-6">
         {currentProduct ? (
           <div>
-            <h4>Tutorial</h4>
+            <h4>Product</h4>
             <div>
               <label>
                 <strong>Title:</strong>
               </label>{" "}
-              {currentTutorial.title}
+              {currentProduct.title}
             </div>
             <div>
               <label>
@@ -184,7 +173,7 @@ const ProductList = () => {
         ) : (
           <div>
             <br />
-            <p>Please click on a Tutorial...</p>
+            <p>Please click on a Product...</p>
           </div>
         )}
       </div>
